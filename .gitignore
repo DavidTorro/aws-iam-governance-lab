@@ -1,0 +1,27 @@
+# Material del enunciado entregado por el profesorado
+enunciados/
+
+# Credenciales y configuración local
+.aws/
+.env
+.env.*
+!.env.example
+credentials
+*.pem
+
+# Datos locales del emulador y resultados temporales
+.floci/
+floci-data/
+tmp/
+*.log
+
+# Documentación y Python
+.venv/
+__pycache__/
+site/
+
+# Sistema y editores
+.DS_Store
+.idea/
+.vscode/
+*.swp

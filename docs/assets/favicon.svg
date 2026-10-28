@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="IAM Governance Lab">
+  <rect width="128" height="128" rx="26" fill="#10243A"/>
+  <circle cx="64" cy="66" r="43" fill="#102C3B" stroke="#5EEAD4" stroke-width="5"/>
+  <path d="M52 58V47a12 12 0 0 1 24 0v11" fill="none" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
+  <rect x="45" y="57" width="38" height="32" rx="6" fill="#FBBF24"/>
+  <circle cx="64" cy="72" r="4" fill="#10243A"/>
+  <path d="M64 74v7" stroke="#10243A" stroke-width="3" stroke-linecap="round"/>
+</svg>

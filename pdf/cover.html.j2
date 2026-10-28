@@ -1,0 +1,11 @@
+<article id="doc-cover">
+  <div class="cover-band"></div>
+  <div class="cover-main">
+    {% if cover_logo is defined %}
+      <img class="cover-logo" src="{{ cover_logo | to_url }}" alt="">
+    {% endif %}
+    <h1>{{ cover_title | e }}</h1>
+    <p class="cover-subtitle">{{ cover_subtitle | e }}</p>
+  </div>
+  <p class="cover-footer">Práctica de gobernanza de identidades · {{ now.strftime('%d/%m/%Y') }}</p>
+</article>

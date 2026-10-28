@@ -1,0 +1,76 @@
+site_name: AWS IAM Governance Lab
+site_description: Práctica de gobernanza de identidades con Floci y AWS CLI
+site_author: David Torró
+
+theme:
+  name: material
+  language: es
+  font: false
+  features:
+    - navigation.footer
+    - content.code.copy
+  icon:
+    logo: material/shield-lock
+  favicon: assets/favicon.svg
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/nav-toggle.js
+
+extra:
+  generator: false
+
+plugins:
+  - search:
+      lang: es
+  - to-pdf:
+      enabled_if_env: ENABLE_PDF_EXPORT
+      output_path: pdf/aws-iam-governance-lab.pdf
+      custom_template_path: pdf
+      cover_title: AWS IAM Governance Lab
+      cover_subtitle: Gobernanza de identidades y mínimo privilegio con Floci
+      cover_logo: assets/favicon.svg
+      author: David Torró
+      toc_title: Índice
+      toc_level: 2
+      ordered_chapter_level: 2
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
+nav:
+  - Inicio: index.md
+  - Entorno:
+      - Floci: entorno/floci.md
+      - Flujo de trabajo: entorno/flujo-de-trabajo.md
+  - Usuarios y grupos: usuarios-y-grupos.md
+  - Políticas:
+      - Dev-Team: politicas/dev-team.md
+      - Ops-Team: politicas/ops-team.md
+      - SecOps-Team: politicas/secops-team.md
+  - Auditoría: auditoria/simulador.md
+  - Decisiones: decisiones.md
+  - Conclusiones: conclusiones.md
