@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  policies-json:
+    name: Validar políticas JSON
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Validar archivos de políticas presentes
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for path in Path("policies").glob("*-policy.json"):
+              with path.open(encoding="utf-8") as file:
+                  json.load(file)
+              print(f"OK: {path}")
+          PY
+
+  mkdocs-build:
+    name: Construir documentación
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Instalar dependencias del PDF
+        run: sudo apt-get update && sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0
+      - name: Instalar MkDocs
+        run: pip install -r requirements.txt
+      - name: Comprobar la documentación
+        run: mkdocs build --strict
