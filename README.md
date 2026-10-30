@@ -9,12 +9,12 @@
   <img src="https://img.shields.io/badge/-Floci-25b7a4?style=for-the-badge" alt="Floci">
 <br>
   <a href="https://github.com/DavidTorro/aws-iam-governance-lab/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/DavidTorro/aws-iam-governance-lab/ci.yml?branch=main&style=for-the-badge&label=CI" alt="CI">
+    <img src="https://img.shields.io/badge/CI-GitHub%20Actions-2088ff?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI en GitHub Actions">
   </a>
-  <a href="./docs/index.md">
+  <a href="https://davidtorro.github.io/aws-iam-governance-lab/">
     <img src="https://img.shields.io/badge/docs-MkDocs-526cfe?style=for-the-badge&logo=materialformkdocs&logoColor=white" alt="Documentación">
   </a>
-  <a href="./output/pdf/aws-iam-governance-lab.pdf">
+  <a href="https://davidtorro.github.io/aws-iam-governance-lab/pdf/aws-iam-governance-lab.pdf">
     <img src="https://img.shields.io/badge/memoria-PDF-b30b00?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Memoria en PDF">
   </a>
   <a href="https://github.com/DavidTorro">
