@@ -1,0 +1,202 @@
+{
+  "verified_at_utc": "2026-10-30T11:35:35.643485+00:00",
+  "endpoint": "http://localhost:4566",
+  "groups": {
+    "Dev-Team": [
+      "roberto",
+      "sandra",
+      "alicia"
+    ],
+    "Ops-Team": [
+      "marta",
+      "alexis"
+    ],
+    "SecOps-Team": [
+      "camila",
+      "alicia"
+    ]
+  },
+  "simulations": {
+    "roberto": {
+      "arn": "arn:aws:iam::000000000000:user/roberto",
+      "results": [
+        {
+          "EvalActionName": "s3:GetObject",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "s3:DeleteObject",
+          "EvalResourceName": "*",
+          "EvalDecision": "explicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "dynamodb:PutItem",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "ec2:StartInstances",
+          "EvalResourceName": "*",
+          "EvalDecision": "implicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        }
+      ]
+    },
+    "alicia": {
+      "arn": "arn:aws:iam::000000000000:user/alicia",
+      "results": [
+        {
+          "EvalActionName": "s3:GetObject",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "s3:DeleteObject",
+          "EvalResourceName": "*",
+          "EvalDecision": "explicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "dynamodb:PutItem",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "cloudtrail:LookupEvents",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "iam:ListUsers",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "ec2:TerminateInstances",
+          "EvalResourceName": "*",
+          "EvalDecision": "explicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "dynamodb:DeleteTable",
+          "EvalResourceName": "*",
+          "EvalDecision": "explicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        }
+      ]
+    },
+    "marta": {
+      "arn": "arn:aws:iam::000000000000:user/marta",
+      "results": [
+        {
+          "EvalActionName": "ec2:DescribeInstances",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "ec2:StartInstances",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "ec2:StopInstances",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "lambda:ListFunctions",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "lambda:CreateFunction",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "s3:GetObject",
+          "EvalResourceName": "*",
+          "EvalDecision": "implicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        }
+      ]
+    },
+    "camila": {
+      "arn": "arn:aws:iam::000000000000:user/camila",
+      "results": [
+        {
+          "EvalActionName": "cloudtrail:LookupEvents",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "logs:FilterLogEvents",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "iam:ListUsers",
+          "EvalResourceName": "*",
+          "EvalDecision": "allowed",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "s3:DeleteObject",
+          "EvalResourceName": "*",
+          "EvalDecision": "explicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "ec2:TerminateInstances",
+          "EvalResourceName": "*",
+          "EvalDecision": "explicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        },
+        {
+          "EvalActionName": "dynamodb:PutItem",
+          "EvalResourceName": "*",
+          "EvalDecision": "implicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": []
+        }
+      ]
+    }
+  }
+}

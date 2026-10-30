@@ -20,6 +20,13 @@ tmp/
 __pycache__/
 site/
 
+# Terraform: estado y proveedores locales (el lockfile sí se versiona)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+
 # Sistema y editores
 .DS_Store
 .idea/
