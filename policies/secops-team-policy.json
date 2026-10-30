@@ -1,0 +1,29 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ConsultarCloudTrail",
+      "Effect": "Allow",
+      "Action": ["cloudtrail:LookupEvents", "cloudtrail:Describe*", "cloudtrail:Get*"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ConsultarCloudWatchLogs",
+      "Effect": "Allow",
+      "Action": ["logs:Describe*", "logs:Get*", "logs:FilterLogEvents"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ConsultarIAM",
+      "Effect": "Allow",
+      "Action": ["iam:Get*", "iam:List*"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ProtegerRecursosProduccion",
+      "Effect": "Deny",
+      "Action": ["ec2:TerminateInstances", "s3:DeleteObject", "dynamodb:DeleteTable"],
+      "Resource": "*"
+    }
+  ]
+}
