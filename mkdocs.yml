@@ -1,6 +1,10 @@
 site_name: AWS IAM Governance Lab
 site_description: Práctica de gobernanza de identidades con Floci y AWS CLI
 site_author: David Torró
+site_url: https://davidtorro.github.io/aws-iam-governance-lab/
+repo_url: https://github.com/DavidTorro/aws-iam-governance-lab
+repo_name: DavidTorro/aws-iam-governance-lab
+edit_uri: ""
 
 theme:
   name: material
@@ -11,6 +15,7 @@ theme:
     - content.code.copy
   icon:
     logo: material/shield-lock
+    repo: fontawesome/brands/github
   favicon: assets/favicon.svg
   palette:
     - scheme: default
